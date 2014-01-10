@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">30dp</dimen>
+    <dimen name="title_vertical_margin">5dp</dimen>
+    <dimen name="question_vertical_margin">24dp</dimen>
+    <dimen name="question_text_size">20sp</dimen>
+    <dimen name="answer_text_size">20sp</dimen>
+    <dimen name="likert_title_size">24sp</dimen>
+</resources>

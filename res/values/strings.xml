@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tilt</string>
+    <string name="header"><u>Perinteinen valikko</u></string>
+    <string name="debug"><b>Debug: </b></string>
+    <string name="sensor">Sensori: </string>
+    <string name="b_form">Lomake</string>
+    <string name="b_show">Näytä</string>
+    <string name="b_hide">Piilota</string>
+    <string name="save">Tallenna</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="sex"><b>Sukupuoli:</b></string>
+	<string name="man">Mies</string>
+	<string name="woman">Nainen</string>
+	<string name="age"><b>Ikä:</b></string>
+	<string name="sex_error">Valitse sukupuoli</string>
+	<string name="age_error">Täytä ikäsi</string>
+	<string name ="default_radiobutton_error">Valitse jokin vaihtoehdoista</string>
+	<string name="likert_help">1. täysin eri mieltä, 2. jokseenkin eri mieltä, 3. ei samaa eikä eri mieltä, 4. jokseenkin samaa mieltä, 5. täysin samaa mieltä</string>
+	<string name="likert1">1</string>
+	<string name="likert2">2</string>
+	<string name="likert3">3</string>
+	<string name="likert4">4</string>
+	<string name="likert5">5</string>
+	<string name="likert_title1"><b>Perinteinen valikko:</b></string>
+	<string name="likert_title2"><b>Pyyhkäisyvalikko:</b></string>
+	<string name="likert_title3"><b>Napautusvalikko:</b></string>
+	<string name="likert_title4"><b>Kallistusvalikko:</b></string>
+	<string name="age_hint">vuotta</string>
+	<!-- QUESTION 1 -->
+	<string name="question1"><b>Kuinka paljon sinulla on aikaisempaa kokemusta kosketusnäytöllisistä laitteista (esim. älypuhelin, tablet)?</b></string>
+	<string name="question1.1">Ei ole lainkaan aiempaa kokemusta.</string>
+	<string name="question1.2">Olen käyttänyt sellaista muutaman kerran aikaisemmin.</string>
+	<string name="question1.3">Käytän sellaista muutaman viikon tai kuukauden välein.</string>
+	<string name="question1.4">Käytän sellaista noin 1&#8211;4 kertaa viikossa.</string>
+	<string name="question1.5">Käytän sellaista lähes päivittäin.</string>
+	<!-- QUESTION 2 -->
+	<string name="question2"><b>Kuinka paljon sinulla on aikaisempaa kokemusta mobiililaitteen ohjaamiseen kallistuseleillä. (esim. pelit, dokumentin vieritys tai zoomaus)?</b></string>
+	<string name="question2.1">En ole käyttänyt elettä koskaan aikaisemmin.</string>
+	<string name="question2.2">Olen käyttänyt kerran tai kaksi.</string>
+	<string name="question2.3">Olen käyttänyt useamman kerran.</string>
+	<string name="question2.4">Käytän sellaista muutaman viikon tai kuukauden välein.</string>
+	<string name="question2.5">Käytän sellaista noin 1&#8211;4 kertaa viikossa tai useammin.</string>
+	<!-- QUESTION 3 -->
+	<string name="question3"><b>Jos olet käyttänyt kallistuseleitä aikaisemmin, niin missä sovelluksessa?</b></string>
+	<!--  QUESTION 4 -->
+	<string name="question4"><b>1. Valikon käyttö oli nopeaa.</b></string>
+	<!-- QUESTION 5 -->
+	<string name="question5"><b>2. Valikon käyttö oli miellyttävää.</b></string>
+	<!--  QUESTION 6 -->
+	<string name="question6"><b>3. Valikkoa oli helppo oppia käyttämään.</b></string>
+	<!-- QUESTION 7 -->
+	<string name="question7"><b>4. Valikko oli hyödyllinen.</b></string>
+	<!-- QUESTION 8 -->
+	<string name="question8"><b>5. Haluaisin että tällainen valikko olisi muissakin käyttämissäni sovelluksissa.</b></string>
+	<!-- QUESTION 24 -->
+	<string name="question24"><b>Mikä valikkototeutuksista oli mielestäsi paras?</b></string>
+	<string name="menu1">Perinteinen valikko</string>
+	<string name="menu2">Pyyhkäisyvalikko</string>
+	<string name="menu3">Napautusvalikko</string>
+	<string name="menu4">Kallistusvalikko</string>
+	<!-- QUESTION 25 -->
+	<string name="question25"><b>Miksi pidit tätä parhaana toteutuksena?</b></string>
+	<!-- QUESTION 26 -->
+	<string name="question26"><b>Mikä valikkototeutuksista oli mielestäsi huonoin?</b></string>
+	<!-- QUESTION 27 -->
+	<string name="question27"><b>Miksi pidit tätä huonoimpana toteutuksena?</b></string>
+</resources>
