@@ -37,7 +37,7 @@ public class SensorService extends Service implements SensorEventListener {
 	  }
 
 	  protected void onPause() {
-	    mSensorManager.unregisterListener(this);
+	    mSensorManager.unregisterListener(this, mOrientation);
 	  }
 
 	  @Override

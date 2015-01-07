@@ -17,15 +17,36 @@
 	  android:paddingRight="15dp"
 	  android:paddingBottom="15dp"
 	  android:background="#000000" >
-		<TextView 
-		    android:id="@+id/headerView"
-	    	android:layout_width="fill_parent" 
+	  	<Button 
+	  	    android:id="@+id/b_options"
+	    	android:layout_width="300dp" 
 	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000"
-	    	android:textSize="18sp"
-	    	android:text="@string/header" />
+	    	android:layout_gravity="center_horizontal"
+	    	android:background="#000000"
+	    	style="?android:attr/borderlessButtonStyle" />
+	  	<RelativeLayout
+	  	    android:id="@+id/ll_header"
+	  	    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF" >
+			<TextView 
+			    android:id="@+id/headerView"
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:textColor="#000000"
+		    	android:textSize="18sp"
+		    	android:text="@string/header" />
+			<TextView 
+			    android:id="@+id/counterView"
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content"
+		    	android:layout_alignParentRight="true"
+		    	android:paddingRight="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000"
+		    	android:textSize="18sp" />
+		</RelativeLayout>
 		<TextView 
 		    android:id="@+id/characterView"
 	    	android:layout_width="fill_parent" 
@@ -51,7 +72,45 @@
 	    	android:background="#FFFFFF"
 	    	android:textColor="#000000" />
 		<TextView 
+		    android:id="@+id/times_label"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:background="#FFFFFF"
+	    	android:text="@string/times_label"
+	    	android:textColor="#000000" />
+		<TextView 
 		    android:id="@+id/times"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:background="#FFFFFF"
+	    	android:textColor="#000000" />
+		<TextView 
+		    android:id="@+id/selection_label"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:background="#FFFFFF"
+	    	android:text="@string/selection_label"
+	    	android:textColor="#000000" />
+		<TextView 
+		    android:id="@+id/selections"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:background="#FFFFFF"
+	    	android:textColor="#000000" />
+		<TextView 
+		    android:id="@+id/show_label"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:background="#FFFFFF"
+	    	android:text="@string/show_label"
+	    	android:textColor="#000000" />
+		<TextView 
+		    android:id="@+id/shows"
 	    	android:layout_width="fill_parent" 
 	    	android:layout_height="wrap_content"
 	    	android:paddingLeft="10dp"
@@ -71,24 +130,6 @@
 		    android:orientation="horizontal"
 		    android:layout_width="fill_parent" 
 	    	android:layout_height="wrap_content" >
-			<Button 
-			    android:id="@+id/b_form"
-			    android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/b_form"
-		    	android:onClick="openForm" />
-			<Button 
-			    android:id="@+id/b_show"
-			    android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/b_show"
-		    	android:onClick="showMenu" />
-			<Button 
-			    android:id="@+id/b_hide"
-			    android:layout_width="wrap_content" 
-		    	android:layout_height="wrap_content"
-		    	android:text="@string/b_hide"
-		    	android:onClick="hideMenu" />
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>

@@ -32,7 +32,7 @@ public class FormActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_form);
-		
+		//hideSystemUI();
 		System.out.println("FormActivity .onCreate");
 	}
 
@@ -199,7 +199,7 @@ public class FormActivity extends Activity {
                 break;
         }
     }
-    
+ 	
     final class Pair {
         private final int first; // errors count
         private final String second; // string data

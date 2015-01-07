@@ -41,18 +41,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int radiobutton_border=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f09008f;
+        public static final int action_settings=0x7f0900aa;
         public static final int age=0x7f090004;
-        public static final int b_form=0x7f09008c;
-        public static final int b_hide=0x7f09008e;
-        public static final int b_show=0x7f09008d;
-        public static final int buttons=0x7f09008b;
+        public static final int b_form=0x7f0900a8;
+        public static final int b_ok=0x7f0900a9;
+        public static final int b_options=0x7f090085;
+        public static final int b_quit=0x7f0900a7;
+        public static final int buttons=0x7f090093;
+        public static final int cb_hideable=0x7f0900a1;
+        public static final int cb_reverse=0x7f0900a3;
         public static final int centrerView=0x7f090084;
-        public static final int characterView=0x7f090086;
+        public static final int characterView=0x7f090089;
         public static final int container=0x7f090083;
-        public static final int debug=0x7f090087;
+        public static final int counterView=0x7f090088;
+        public static final int debug=0x7f09008a;
         public static final int form_container=0x7f090000;
-        public static final int headerView=0x7f090085;
+        public static final int headerView=0x7f090087;
+        public static final int hideangle_edit=0x7f09009f;
+        public static final int hideangle_label=0x7f09009e;
+        public static final int ll_count=0x7f0900a4;
+        public static final int ll_header=0x7f090086;
+        public static final int ll_hideable=0x7f0900a0;
+        public static final int ll_np=0x7f090097;
+        public static final int ll_reverse=0x7f0900a2;
+        public static final int ll_showangle=0x7f09009a;
+        public static final int ll_userID=0x7f090094;
+        public static final int np=0x7f090099;
+        public static final int np_label=0x7f090098;
         public static final int question25_answer=0x7f09007d;
         public static final int question27_answer=0x7f090082;
         public static final int question3_answer=0x7f090010;
@@ -178,101 +193,128 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int radio_woman=0x7f090003;
         public static final int rg1=0x7f090005;
         public static final int rg_sex=0x7f090001;
-        public static final int sensor=0x7f09008a;
+        public static final int selection_label=0x7f09008e;
+        public static final int selections=0x7f09008f;
+        public static final int sensor=0x7f090092;
+        public static final int show_label=0x7f090090;
+        public static final int showangle_edit=0x7f09009d;
+        public static final int showangle_label=0x7f09009c;
+        public static final int shows=0x7f090091;
         public static final int table1=0x7f090011;
         public static final int table2=0x7f09002b;
         public static final int table3=0x7f090045;
         public static final int table4=0x7f09005f;
-        public static final int timer=0x7f090088;
-        public static final int times=0x7f090089;
+        public static final int test_count_edit=0x7f0900a6;
+        public static final int test_count_label=0x7f0900a5;
+        public static final int timer=0x7f09008b;
+        public static final int times=0x7f09008d;
+        public static final int times_label=0x7f09008c;
+        public static final int tv_threshold=0x7f09009b;
+        public static final int userID_edit=0x7f090096;
+        public static final int userID_label=0x7f090095;
     }
     public static final class layout {
         public static final int activity_form=0x7f030000;
         public static final int activity_menu=0x7f030001;
+        public static final int activity_options=0x7f030002;
     }
     public static final class menu {
         public static final int form=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060009;
-        public static final int age=0x7f06000e;
-        public static final int age_error=0x7f060010;
-        public static final int age_hint=0x7f06001c;
+        public static final int action_settings=0x7f06000f;
+        public static final int age=0x7f06001c;
+        public static final int age_error=0x7f06001e;
+        public static final int age_hint=0x7f06002a;
         public static final int app_name=0x7f060000;
         public static final int b_form=0x7f060004;
         public static final int b_hide=0x7f060006;
+        public static final int b_ok=0x7f060008;
+        public static final int b_quit=0x7f060007;
         public static final int b_show=0x7f060005;
         public static final int debug=0x7f060002;
-        public static final int default_radiobutton_error=0x7f060011;
+        public static final int default_radiobutton_error=0x7f06001f;
         public static final int header=0x7f060001;
-        public static final int hello_world=0x7f06000a;
-        public static final int likert1=0x7f060013;
-        public static final int likert2=0x7f060014;
-        public static final int likert3=0x7f060015;
-        public static final int likert4=0x7f060016;
-        public static final int likert5=0x7f060017;
-        public static final int likert_help=0x7f060012;
-        public static final int likert_title1=0x7f060018;
-        public static final int likert_title2=0x7f060019;
-        public static final int likert_title3=0x7f06001a;
-        public static final int likert_title4=0x7f06001b;
-        public static final int man=0x7f06000c;
-        public static final int menu1=0x7f060030;
-        public static final int menu2=0x7f060031;
-        public static final int menu3=0x7f060032;
-        public static final int menu4=0x7f060033;
+        public static final int hello_world=0x7f060018;
+        public static final int hide_threshold=0x7f060014;
+        public static final int hideable=0x7f060015;
+        public static final int likert1=0x7f060021;
+        public static final int likert2=0x7f060022;
+        public static final int likert3=0x7f060023;
+        public static final int likert4=0x7f060024;
+        public static final int likert5=0x7f060025;
+        public static final int likert_help=0x7f060020;
+        public static final int likert_title1=0x7f060026;
+        public static final int likert_title2=0x7f060027;
+        public static final int likert_title3=0x7f060028;
+        public static final int likert_title4=0x7f060029;
+        public static final int man=0x7f06001a;
+        public static final int menu1=0x7f06003e;
+        public static final int menu2=0x7f06003f;
+        public static final int menu3=0x7f060040;
+        public static final int menu4=0x7f060041;
         /**  QUESTION 1 
          */
-        public static final int question1=0x7f06001d;
-        public static final int question1_1=0x7f06001e;
-        public static final int question1_2=0x7f06001f;
-        public static final int question1_3=0x7f060020;
-        public static final int question1_4=0x7f060021;
-        public static final int question1_5=0x7f060022;
+        public static final int question1=0x7f06002b;
+        public static final int question1_1=0x7f06002c;
+        public static final int question1_2=0x7f06002d;
+        public static final int question1_3=0x7f06002e;
+        public static final int question1_4=0x7f06002f;
+        public static final int question1_5=0x7f060030;
         /**  QUESTION 2 
          */
-        public static final int question2=0x7f060023;
-        public static final int question2_1=0x7f060024;
-        public static final int question2_2=0x7f060025;
-        public static final int question2_3=0x7f060026;
-        public static final int question2_4=0x7f060027;
-        public static final int question2_5=0x7f060028;
+        public static final int question2=0x7f060031;
+        public static final int question2_1=0x7f060032;
+        public static final int question2_2=0x7f060033;
+        public static final int question2_3=0x7f060034;
+        public static final int question2_4=0x7f060035;
+        public static final int question2_5=0x7f060036;
         /**  QUESTION 24 
          */
-        public static final int question24=0x7f06002f;
+        public static final int question24=0x7f06003d;
         /**  QUESTION 25 
          */
-        public static final int question25=0x7f060034;
+        public static final int question25=0x7f060042;
         /**  QUESTION 26 
          */
-        public static final int question26=0x7f060035;
+        public static final int question26=0x7f060043;
         /**  QUESTION 27 
          */
-        public static final int question27=0x7f060036;
+        public static final int question27=0x7f060044;
         /**  QUESTION 3 
          */
-        public static final int question3=0x7f060029;
+        public static final int question3=0x7f060037;
         /**   QUESTION 4 
          */
-        public static final int question4=0x7f06002a;
+        public static final int question4=0x7f060038;
         /**  QUESTION 5 
          */
-        public static final int question5=0x7f06002b;
+        public static final int question5=0x7f060039;
         /**   QUESTION 6 
          */
-        public static final int question6=0x7f06002c;
+        public static final int question6=0x7f06003a;
         /**  QUESTION 7 
          */
-        public static final int question7=0x7f06002d;
+        public static final int question7=0x7f06003b;
         /**  QUESTION 8 
          */
-        public static final int question8=0x7f06002e;
-        public static final int save=0x7f060007;
+        public static final int question8=0x7f06003c;
+        public static final int reverse=0x7f060016;
+        public static final int save=0x7f060009;
+        public static final int selection_label=0x7f06000e;
         public static final int sensor=0x7f060003;
-        public static final int sex=0x7f06000b;
-        public static final int sex_error=0x7f06000f;
-        public static final int title_activity_form=0x7f060008;
-        public static final int woman=0x7f06000d;
+        public static final int sex=0x7f060019;
+        public static final int sex_error=0x7f06001d;
+        public static final int show_label=0x7f06000d;
+        public static final int show_threshold=0x7f060013;
+        public static final int t_menutype=0x7f060010;
+        public static final int t_threshold=0x7f060011;
+        public static final int test_count=0x7f060017;
+        public static final int times_label=0x7f06000c;
+        public static final int title_activity_form=0x7f06000a;
+        public static final int title_activity_options=0x7f06000b;
+        public static final int userID_label=0x7f060012;
+        public static final int woman=0x7f06001b;
     }
     public static final class style {
         /** 

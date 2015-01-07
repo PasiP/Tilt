@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +30,13 @@
         <activity
             android:name="fi.uta.sis.thesis.tilt.FormActivity"
             android:label="@string/title_activity_form"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="fi.uta.sis.thesis.tilt.OptionsActivity"
+            android:label="@string/title_activity_options"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
             android:windowSoftInputMode="stateHidden" >
