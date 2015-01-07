@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#CCCCCC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <LinearLayout
+        android:id="@+id/ll_userID"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:focusableInTouchMode="true"
+     	android:background="#FFFFFF" >
+        <TextView
+            android:id="@+id/userID_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:text="@string/userID_label"/>
+        <EditText 
+            android:id="@+id/userID_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_np"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_userID"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/np_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:text="@string/t_menutype" />
+
+        <NumberPicker
+            android:id="@+id/np"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+	</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_showangle"
+        android:orientation="horizontal"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:layout_marginTop="2dp"
+     	android:layout_below="@+id/ll_np"
+     	android:background="#FFFFFF" >
+        <TextView 
+        android:id="@+id/tv_threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/t_threshold" />
+        <TextView
+            android:id="@+id/showangle_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:text="@string/show_threshold"/>
+        <EditText 
+            android:id="@+id/showangle_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        <!-- </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_hideangle"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:layout_below="@+id/ll_showangle"
+     	android:background="#FFFFFF" >  -->
+        <TextView
+            android:id="@+id/hideangle_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:text="@string/hide_threshold"/>
+        <EditText 
+            android:id="@+id/hideangle_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_hideable"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:layout_below="@+id/ll_showangle"
+     	android:layout_marginTop="15dp"
+     	android:background="#FFFFFF" >
+        <CheckBox 
+            android:id="@+id/cb_hideable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hideable"
+            android:textSize="18sp"
+            android:button="@null"
+			android:drawableRight="?android:attr/listChoiceIndicatorMultiple" />
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/ll_reverse"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:layout_below="@+id/ll_hideable"
+     	android:layout_marginTop="15dp"
+     	android:background="#FFFFFF" >
+        <CheckBox 
+            android:id="@+id/cb_reverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reverse"
+            android:textSize="18sp"
+            android:button="@null"
+			android:drawableRight="?android:attr/listChoiceIndicatorMultiple" />
+        </LinearLayout>
+		<LinearLayout
+        android:id="@+id/ll_count"
+     	android:layout_width="fill_parent"
+     	android:layout_height="wrap_content"
+     	android:layout_below="@+id/ll_reverse"
+     	android:background="#FFFFFF" >
+        <TextView
+            android:id="@+id/test_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:text="@string/test_count"/>
+        <EditText 
+            android:id="@+id/test_count_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        </LinearLayout>
+        
+    <Button
+        android:id="@+id/b_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="quitProgram"
+        android:text="@string/b_quit" />
+    <Button 
+	    android:id="@+id/b_form"
+	    android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/b_quit"
+    	android:layout_alignParentRight="true"
+    	android:layout_marginTop="15dp"
+    	android:text="@string/b_form"
+    	android:onClick="openForm" />
+    <Button
+        android:id="@+id/b_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_count"
+        android:layout_marginTop="20dp"
+        android:onClick="ok"
+        android:text="@string/b_ok" />
+
+</RelativeLayout>
