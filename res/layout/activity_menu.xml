@@ -7,7 +7,7 @@
     android:baselineAligned="false"
     android:background="#000000" >
     <LinearLayout
-      android:id="@+id/centrerView"
+      android:id="@+id/centerView"
 	  android:orientation="vertical"
 	  android:layout_width="0dip" 
 	  android:layout_height="fill_parent"
@@ -55,76 +55,82 @@
 	    	android:background="#FFFFFF"
 	    	android:textColor="#000000"
 	    	android:textSize="140sp" />
-		<TextView 
-		    android:id="@+id/debug"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:layout_marginTop="10dp"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000"
-	    	android:text="@string/debug" />
-		<TextView 
-		    android:id="@+id/timer"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/times_label"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:text="@string/times_label"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/times"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/selection_label"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:text="@string/selection_label"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/selections"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/show_label"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:text="@string/show_label"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/shows"
-	    	android:layout_width="fill_parent" 
-	    	android:layout_height="wrap_content"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000" />
-		<TextView 
-		    android:id="@+id/sensor"
+		<LinearLayout 
+		    android:id="@+id/ll_debug"
 		    android:layout_width="fill_parent" 
 	    	android:layout_height="wrap_content"
-	    	android:layout_marginTop="3dp"
-	    	android:paddingLeft="10dp"
-	    	android:background="#FFFFFF"
-	    	android:textColor="#000000"
-	    	android:text="@string/sensor" />
+		    android:orientation="vertical" >
+			<TextView 
+			    android:id="@+id/debug"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:layout_marginTop="10dp"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000"
+		    	android:text="@string/debug" />
+			<TextView 
+			    android:id="@+id/timer"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/times_label"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:text="@string/times_label"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/times"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/selection_label"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:text="@string/selection_label"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/selections"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/show_label"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:text="@string/show_label"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/shows"
+		    	android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000" />
+			<TextView 
+			    android:id="@+id/sensor"
+			    android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:layout_marginTop="3dp"
+		    	android:paddingLeft="10dp"
+		    	android:background="#FFFFFF"
+		    	android:textColor="#000000"
+		    	android:text="@string/sensor" />
+		</LinearLayout>
 		<LinearLayout 
 		    android:id="@+id/buttons"
 		    android:orientation="horizontal"

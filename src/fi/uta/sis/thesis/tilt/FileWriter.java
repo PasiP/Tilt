@@ -80,7 +80,8 @@ public class FileWriter {
 		return success;
 	}
 	
-	public static void listFiles() {
+	
+	/* public static void listFiles() {
 		List<String> fileList = new ArrayList<String>();
 		File f = new File(app_root);
 		File[] files = f.listFiles();
@@ -97,5 +98,5 @@ public class FileWriter {
 	    	 System.out.println(iterator.next());
 	     }
 	    
-	}
+	} */
 }

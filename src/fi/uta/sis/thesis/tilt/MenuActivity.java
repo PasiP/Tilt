@@ -32,7 +32,7 @@ public class MenuActivity extends Activity {
 	private TimerThread th;
 	private String[] items = { "A", "B", "C", "D", "E", "1", "2", "3", "4", "5" };
 	private String previous = "";
-	private TextView debug;
+	private TextView tv_debug;
 	private static String menuName;
 	private TextView characterView;
 	private TextView timer;
@@ -41,7 +41,9 @@ public class MenuActivity extends Activity {
 	private TextView shows;
 	private TextView sensor;
 	private TextView counter;
+	private TextView header;
 	private LinearLayout container;
+	private LinearLayout ll_debug;
 	private SwipeMenu firstMenuView;
 	private SwipeMenu secondMenuView;
 	private int points = 0;
@@ -56,12 +58,14 @@ public class MenuActivity extends Activity {
 	private BroadcastReceiver updateOrientation;
 	private int show_threshold = 15;
 	private int hide_threshold = 10;
-	private int reset_threshold = 2;
+	private int reset_threshold = 4;
 	private static String userID = "0";
 	static final int PICK_MENU_REQUEST = 123;
 	private Boolean hideable = true;
 	private Boolean reverse = false;
 	private Boolean reset = false;
+	private Boolean debug = false;
+	private Boolean firstTime = true;
 	private Date showTime; // when menu is shown
 	private Date selectTime; // when user selects button
 	private Date newTime; // when new task is shown
@@ -72,16 +76,18 @@ public class MenuActivity extends Activity {
 		setContentView(R.layout.activity_menu);
 		
 		container = (LinearLayout) findViewById(R.id.container);
+		ll_debug = (LinearLayout) findViewById(R.id.ll_debug);
 		buildMenus();
 		timer = (TextView) findViewById(R.id.timer);
 		times = (TextView) findViewById(R.id.times);
 		selections = (TextView) findViewById(R.id.selections);
 		shows = (TextView) findViewById(R.id.shows);
-		debug = (TextView) findViewById(R.id.debug);
-		debug.setText("Pisteet 0/0");
+		tv_debug = (TextView) findViewById(R.id.debug);
+		tv_debug.setText("Pisteet 0/0");
 		sensor = (TextView) findViewById(R.id.sensor);
 		characterView = (TextView) findViewById(R.id.characterView);
 		counter = (TextView) findViewById(R.id.counterView);
+		header = (TextView) findViewById(R.id.headerView);
 		
 		// closes the program if EXIT flag is set
 		if (getIntent().getBooleanExtra("EXIT", false)) {
@@ -122,7 +128,7 @@ public class MenuActivity extends Activity {
 					// test is done
 					if(games >= total) {
 						openTestDoneDialog();
-						FileWriter.listFiles();
+						// FileWriter.listFiles();
 						FileWriter.writeTextToFile(false);
 					}
 				}
@@ -173,6 +179,13 @@ public class MenuActivity extends Activity {
 		th = new TimerThread(timer);
 		time.setToNow();
 		lotto();
+		
+		/* if(firstTime) {
+			firstTime = false;
+			firstMenuView.hide();
+			secondMenuView.hide();
+			openOptions(null);
+		} */
 	}
 
 	public int getShow_threshold() {
@@ -276,7 +289,7 @@ public class MenuActivity extends Activity {
 						if (correct) {
 							points++;
 						}
-						debug.setText("Pisteet " + points + "/" + games);
+						tv_debug.setText("Pisteet " + points + "/" + games);
 						counter.setText(games + " / " + total);
 						String old = times.getText().toString();
 						String time = timer.getText().toString();
@@ -352,6 +365,7 @@ public class MenuActivity extends Activity {
 	}
 	
 	public static Time getTime() {
+		time.setToNow();
 		return time;
 	}
 
@@ -383,7 +397,6 @@ public class MenuActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK && requestCode == PICK_MENU_REQUEST) {
 			if (data.hasExtra("NAME")) {
-				TextView header = (TextView) findViewById(R.id.headerView);
 				header.setText(data.getExtras().getString("NAME"));
 				menuName = data.getExtras().getString("NAME");
 			}
@@ -408,6 +421,19 @@ public class MenuActivity extends Activity {
 			if (data.hasExtra("REVERSE")) {
 				reverse = data.getExtras().getBoolean("REVERSE");
 			}
+			if (data.hasExtra("DEBUG")) {
+				debug = data.getExtras().getBoolean("DEBUG");
+
+				if(debug) {
+					ll_debug.setVisibility(View.VISIBLE);
+					header.setVisibility(View.VISIBLE);
+					counter.setVisibility(View.VISIBLE);
+				} else {
+					ll_debug.setVisibility(View.GONE);
+					header.setVisibility(View.GONE);
+					counter.setVisibility(View.GONE);
+				}
+			}
 			if (data.hasExtra("TEST_COUNT")) {
 				total = data.getExtras().getInt("TEST_COUNT");
 				counter.setText("0 / "+ Integer.toString(total));
@@ -415,10 +441,26 @@ public class MenuActivity extends Activity {
 			if (data.hasExtra("USER_ID")) {
 				userID = data.getExtras().getString("USER_ID");
 			}
-			// resets the timer
+			
+			reset();
 			th.resetTimer();
 	  }
 	} 
+	
+	private void reset() {
+		games = 0;
+		points = 0;
+		tv_debug.setText("Pisteet 0/0");
+		times.setText("");
+		selections.setText("");
+		shows.setText("");
+		
+		task_times.clear();
+		task_answers.clear();
+		task_correct.clear();
+		task_selections.clear();
+		task_news.clear();
+	}
 	
 	private void openTestDoneDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);

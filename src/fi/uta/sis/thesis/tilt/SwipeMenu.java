@@ -52,7 +52,7 @@ public class SwipeMenu extends LinearLayout {
 			} else {
 				anim = new TranslateAnimation(Animation.ABSOLUTE, fromX, Animation.ABSOLUTE, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
 			}
-			anim.setDuration(300);
+			anim.setDuration(200);
 		    anim.setFillAfter( true );
 		    this.startAnimation(anim);
 		    setVisible(true);
@@ -68,7 +68,7 @@ public class SwipeMenu extends LinearLayout {
 			} else {
 				anim = new TranslateAnimation(Animation.ABSOLUTE, 0, Animation.ABSOLUTE, fromX, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
 			}
-			anim.setDuration(300);
+			anim.setDuration(200);
 		    anim.setFillAfter( true );
 		    this.startAnimation(anim);
 		    setVisible(false);

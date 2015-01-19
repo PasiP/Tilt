@@ -4,6 +4,7 @@
     <string name="app_name">Tilt</string>
     <string name="header"><u>Perinteinen valikko</u></string>
     <string name="debug"><b>Debug: </b></string>
+    <string name="debug_label">Debug: </string>
     <string name="sensor">Sensori: </string>
     <string name="b_form">Lomake</string>
     <string name="b_show">Näytä</string>
@@ -22,8 +23,8 @@
     <string name="userID_label">Käyttäjän ID:</string>
     <string name="show_threshold">Näytä:</string>
     <string name="hide_threshold">Piilota:</string>
-    <string name="hideable">Piilotettavat valikot</string>
-    <string name="reverse">Käänteiset valikot</string>
+    <string name="hideable">Piilotettavat valikot:</string>
+    <string name="reverse">Käänteiset valikot:</string>
     <string name="test_count">Testien lukumäärä:</string>
     <string name="hello_world">Hello world!</string>
 	<string name="sex"><b>Sukupuoli:</b></string>

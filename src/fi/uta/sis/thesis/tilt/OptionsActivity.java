@@ -19,6 +19,7 @@ public class OptionsActivity extends Activity implements NumberPicker.OnValueCha
 	EditText et_userID;
 	CheckBox cb_hideable;
 	CheckBox cb_reverse;
+	CheckBox cb_debug;
 	int defaultTestCount = 20;
 	
 	@Override
@@ -32,26 +33,30 @@ public class OptionsActivity extends Activity implements NumberPicker.OnValueCha
 		hideAngle.setText("0");
 		cb_hideable = (CheckBox) findViewById(R.id.cb_hideable);
 		cb_reverse = (CheckBox) findViewById(R.id.cb_reverse);
+		cb_debug = (CheckBox) findViewById(R.id.cb_debug);
 		testCount = (EditText) findViewById(R.id.test_count_edit);
 		testCount.setText(Integer.toString(defaultTestCount));
 		et_userID = (EditText) findViewById(R.id.userID_edit);
 		et_userID.setText(MenuActivity.getUserID());
 		
 		menus.add(new Menu("Perinteinen valikko",0,0,false,false));
-		menus.add(new Menu("Tilt Menu 10 10",10,10,true,false));
-		menus.add(new Menu("Tilt Menu 15 10",15,10,true,false));
-		menus.add(new Menu("Tilt Menu Reverse 15 10",15,10,true,true));
+		menus.add(new Menu("Tilt Menu, 15/10",15,10,true,false));
+		menus.add(new Menu("Tilt Menu, 15/10, Reverse",15,10,true,true));
+		menus.add(new Menu("Tilt Menu, 25/15",25,15,true,false));
+		menus.add(new Menu("Tilt Menu, 25/15, Reverse",25,15,true,true));
 		
 		String[] values = {
 				"1. "+ menus.get(0).getName(),
 				"2. "+ menus.get(1).getName(),
 				"3. "+ menus.get(2).getName(),
 				"4. "+ menus.get(3).getName(),
+				"5. "+ menus.get(4).getName(),
 		};
 		
 		NumberPicker np = (NumberPicker) findViewById(R.id.np);
 		np.setMaxValue(values.length-1);
 		np.setMinValue(0);
+		np.setWrapSelectorWheel(false);
 		np.setDisplayedValues(values);
 		np.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
 		np.setOnValueChangedListener(this);
@@ -108,42 +113,37 @@ public class OptionsActivity extends Activity implements NumberPicker.OnValueCha
     }
     
     public void ok(View view) {
-    	System.out.println("KÄYTÄ clicked");
     	Intent intent = new Intent(getApplicationContext(), Menu.class);
-    	/* String name;
-		int showAngle;
-		int hideAngle;
-		Boolean hideable; */
     	NumberPicker np = (NumberPicker) findViewById(R.id.np);
     	int chosen_idx = np.getValue();
+    	
     	String name = menus.get(chosen_idx).getName();
     	intent.putExtra("NAME", name);
+    	
     	int show_angle = Integer.parseInt(showAngle.getText().toString());
     	intent.putExtra("SHOW_ANGLE", show_angle);
+
     	int hide_angle = Integer.parseInt(hideAngle.getText().toString());
     	intent.putExtra("HIDE_ANGLE", hide_angle);
+    	
     	Boolean hideable = cb_hideable.isChecked();
     	intent.putExtra("HIDEABLE", hideable);
+    	
     	Boolean reverse = cb_reverse.isChecked();
     	intent.putExtra("REVERSE", reverse);
+    	
+    	Boolean debug = cb_debug.isChecked();
+    	intent.putExtra("DEBUG", debug);
+    	
     	int testCountNum = Integer.parseInt(testCount.getText().toString());
     	intent.putExtra("TEST_COUNT", testCountNum);
-    	setResult(RESULT_OK, intent);
+    	
     	String user_id = et_userID.getText().toString();
     	intent.putExtra("USER_ID", user_id);
+    	
+    	setResult(RESULT_OK, intent);
     	super.finish();
     }
-    
-    /*public void cb_hideableClicked(View view) {
-    	boolean checked = ((CheckBox) view).isChecked();
-    	
-    	if(checked) {
-    		System.out.println("CB checked");
-    	} else {
-    		System.out.println("CB unchecked");
-    	}
-    	
-    } */
 
 	@Override
 	public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
