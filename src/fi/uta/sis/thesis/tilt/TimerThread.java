@@ -27,7 +27,7 @@ public class TimerThread implements Runnable {
         secs = secs % 60;
         int milliseconds = (int) (updatedTime % 1000);
         timer.setText(mins + ":"
-                + String.format("%02d", secs) + ":"
+                + String.format("%02d", secs) + ","
                 + String.format("%03d", milliseconds) );
         handler.postDelayed(this, 0);
     }

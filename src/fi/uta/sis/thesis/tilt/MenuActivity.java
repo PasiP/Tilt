@@ -21,7 +21,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MenuActivity extends Activity {
 	public enum Alignment {
@@ -65,7 +64,6 @@ public class MenuActivity extends Activity {
 	private Boolean reverse = false;
 	private Boolean reset = false;
 	private Boolean debug = false;
-	private Boolean firstTime = true;
 	private Date showTime; // when menu is shown
 	private Date selectTime; // when user selects button
 	private Date newTime; // when new task is shown
